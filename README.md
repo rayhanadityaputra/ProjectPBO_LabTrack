@@ -60,3 +60,48 @@ Aplikasi ini dirancang dengan memenuhi 4 Pilar Utama Pemrograman Berorientasi Ob
     [DendaTerlambat]              [DendaKerusakan]
 
 +---------------------------------------------------------------------------------------------------+
+
+```
+## ✨ Fitur Utama Sistem
+
+- 👥 **Multi-Actor Access:** Hak akses terpisah untuk **Mahasiswa**, **Dosen**, **Admin Lab**, dan **System Automation**.
+- 📋 **Katalog Alat Real-Time:** Menampilkan data inventaris, ketersediaan stok, serta detail spesifikasi alat.
+- 🔄 **Manajemen Peminjaman & Pengembalian:** Pencatatan transaksi peminjaman lengkap dengan tanggal jatuh tempo dan verifikasi kondisi fisik barang saat dikembalikan (Baik / Rusak Ringan / Rusak Berat / Hilang).
+- 💰 **Kalkulasi Denda Otomatis:** Perhitungan denda otomatis berbasis keterlambatan waktu maupun denda persentase kerusakan fisik.
+- 📊 **Rekapitulasi Laporan:** Fitur pembuatan rekap laporan bulanan untuk Admin Lab.
+
+---
+
+## 📂 Struktur Repositori
+
+```text
+lab-track/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── model/
+│   │   │   │   ├── Pengguna.java (Abstract Class)
+│   │   │   │   ├── Mahasiswa.java
+│   │   │   │   ├── Dosen.java
+│   │   │   │   ├── AdminLab.java
+│   │   │   │   ├── BarangLab.java (Abstract Class)
+│   │   │   │   ├── BarangElektronik.java
+│   │   │   │   ├── BarangKonsumabel.java
+│   │   │   │   ├── TransaksiPeminjaman.java
+│   │   │   │   ├── ItemPeminjaman.java
+│   │   │   │   └── PengembalianLab.java
+│   │   │   │
+│   │   │   ├── service/
+│   │   │   │   ├── HitungDenda.java (Interface)
+│   │   │   │   ├── DendaTerlambat.java
+│   │   │   │   └── DendaKerusakan.java
+│   │   │   │
+│   │   │   └── Main.java (App Runner & CLI Interface)
+│
+├── docs/
+│   ├── PBO_TBP_Kelompok2_LAB_TRACK_Proposal_Lengkap.docx
+│   └── lab_track_class_diagram.png
+│
+├── README.md
+└── .gitignore
