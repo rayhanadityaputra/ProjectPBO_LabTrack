@@ -62,6 +62,8 @@ Aplikasi ini dirancang dengan memenuhi 4 Pilar Utama Pemrograman Berorientasi Ob
 +---------------------------------------------------------------------------------------------------+
 
 ```
+<img width="975" height="596" alt="image" src="https://github.com/user-attachments/assets/ec22c560-a05f-48fd-8f80-5791a3825e2c" />
+
 ## ✨ Fitur Utama Sistem
 
 - 👥 **Multi-Actor Access:** Hak akses terpisah untuk **Mahasiswa**, **Dosen**, **Admin Lab**, dan **System Automation**.
@@ -75,33 +77,25 @@ Aplikasi ini dirancang dengan memenuhi 4 Pilar Utama Pemrograman Berorientasi Ob
 ## 📂 Struktur Repositori
 
 ```text
-lab-track/
-│
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   ├── model/
-│   │   │   │   ├── Pengguna.java (Abstract Class)
-│   │   │   │   ├── Mahasiswa.java
-│   │   │   │   ├── Dosen.java
-│   │   │   │   ├── AdminLab.java
-│   │   │   │   ├── BarangLab.java (Abstract Class)
-│   │   │   │   ├── BarangElektronik.java
-│   │   │   │   ├── BarangKonsumabel.java
-│   │   │   │   ├── TransaksiPeminjaman.java
-│   │   │   │   ├── ItemPeminjaman.java
-│   │   │   │   └── PengembalianLab.java
-│   │   │   │
-│   │   │   ├── service/
-│   │   │   │   ├── HitungDenda.java (Interface)
-│   │   │   │   ├── DendaTerlambat.java
-│   │   │   │   └── DendaKerusakan.java
-│   │   │   │
-│   │   │   └── Main.java (App Runner & CLI Interface)
-│
-├── docs/
-│   ├── PBO_TBP_Kelompok2_LAB_TRACK_Proposal_Lengkap.docx
-│   └── lab_track_class_diagram.png
-│
-├── README.md
-└── .gitignore
+labtrack/
+└─ src/main/java/id/ac/untidar/labtrack/
+   ├─ model/
+   │    Pengguna, Mahasiswa, Dosen, AdminLab,
+   │    BarangLab, BarangElektronik, BarangKonsumabel,
+   │    TransaksiPeminjaman, ItemPeminjaman, PengembalianLab
+   ├─ strategy/
+   │    HitungDenda, DendaTerlambat, DendaKerusakan
+   ├─ notification/
+   │    Notifikasi, NotifikasiKonsol, NotifikasiEmail
+   ├─ repository/
+   │    BarangRepository, MemoryBarangRepository,
+   │    TransaksiRepository, MemoryTransaksiRepository,
+   │    PenggunaRepository, MemoryPenggunaRepository
+   ├─ service/
+   │    PeminjamanService, PengembalianService,
+   │    InventarisService, LaporanService
+   ├─ ui/
+   │    MainMenuView, PeminjamanView, InventarisView, LaporanView,
+   │    PeminjamanController, InventarisController
+   └─ App.java        // merakit semua objek
+
